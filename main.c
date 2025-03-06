@@ -228,7 +228,7 @@ struct country* fetch_countries(char* hostname){
 }
 
 
-struct station* fetch_startions(char* hostname, char* country){
+struct station* fetch_stations(char* hostname, char* country){
 
     char* path = "/json/stations/bycountry/";
     char* url = malloc(strlen(hostname)+strlen(path)+strlen(country)+1);
@@ -462,7 +462,7 @@ int main(int argc, char *argv[]) {
             printf("Fetching stations for %s (%s)...\n", countries_array[chosen_country].country_name,
                    countries_array[chosen_country].country_code);
 
-            struct station* stations = fetch_startions(servers_array[chosen_server].hostname,
+            struct station* stations = fetch_stations(servers_array[chosen_server].hostname,
                                                         countries_array[chosen_country].country_code);
             if (stations == NULL) {
                 fprintf(stderr, "Error in fetching stations\n");

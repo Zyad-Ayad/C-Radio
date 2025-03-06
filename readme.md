@@ -60,5 +60,5 @@ Follow the on-screen prompts to:
 - **main.c:** Contains the main application logic, including menu navigation and memory management.
 - **Functions:**
   - `dns_lookup`: Performs DNS lookup for server discovery.
-  - `fetch_countries` and `fetch_startions`: Retrieve and parse JSON data using `cJSON` from the API.
+  - `fetch_countries` and `fetch_stations`: Retrieve and parse JSON data using `cJSON` from the API.
   - `play_stream` and `stop_playback`: Manage process creation and termination for stream playback with system call error checking.
